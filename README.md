@@ -2,6 +2,7 @@
 Pipeline ETL de análise de desempenho de vendedores utilizando Google Sheets (extração), SQLite/SQL (transformação) e Power BI (visualização), com foco em métricas de vendas e metas.
 
 Análise de Desempenho de Vendedores — Pipeline ETL com SQL
+
 📌 Visão Geral do Projeto
 
 Este projeto tem como objetivo demonstrar, na prática, o processo completo de ETL (Extract, Transform, Load) aplicado a um cenário real de análise de desempenho comercial.
@@ -9,6 +10,7 @@ Este projeto tem como objetivo demonstrar, na prática, o processo completo de E
 Os dados representam informações mensais de vendas por colaborador, incluindo metas, situação (meta batida ou não) e indicadores consolidados para análise de produtividade.
 
 O foco do projeto é evidenciar habilidades em organização de dados, tratamento com SQL e preparação para visualização em ferramentas de BI.
+---
 
 🔹 Extract (Extração dos Dados)
 
@@ -25,6 +27,7 @@ Ajuste de localidade para garantir compatibilidade numérica (formato internacio
 Exportação dos dados em formato CSV, garantindo fácil integração com bancos relacionais
 
 Essa abordagem reflete cenários reais em que dados operacionais são inicialmente registrados em planilhas antes de serem integrados a sistemas analíticos.
+---
 
 🔹 Transform (Transformação dos Dados no SQLite)
 
@@ -47,18 +50,22 @@ Quantas vezes cada colaborador bateu a meta?
 Qual o desempenho por mês?
 
 Quem são os colaboradores mais produtivos no período?
+---
 
 Exemplo de transformação aplicada:
 
 UPDATE Analise_de_Desempenho_de_Vendedores
+
 SET meta_mensal = 5000
+
 WHERE meta_mensal IS NULL;
+
 <img width="893" height="617" alt="image" src="https://github.com/user-attachments/assets/3aefded0-27e0-41a7-a0f8-622ee4721c0e" />
 
 
 
 Além disso, foram desenvolvidas queries agregadas para geração de métricas que serão utilizadas diretamente nas visualizações.
-
+---
 🔹 Load (Carregamento no Power BI)
 
 Após o tratamento e consolidação dos dados no SQLite, o próximo passo do projeto consiste no carregamento dos dados no Power BI.
