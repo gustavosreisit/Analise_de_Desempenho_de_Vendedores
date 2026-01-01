@@ -1,5 +1,5 @@
 # Analise_de_Desempenho_de_Vendedores
-Pipeline ETL de análise de desempenho de vendedores utilizando Google Sheets (extração), SQLite/SQL (transformação) e Power BI (visualização), com foco em métricas de vendas e metas.
+Pipeline ETL de análise de desempenho de vendedores utilizando Google Sheets (extração), SQLite/SQL (transformação) e Looker Studio (visualização), com foco em métricas de vendas e metas.
 
 Análise de Desempenho de Vendedores — Pipeline ETL com SQL
 
@@ -66,28 +66,25 @@ WHERE meta_mensal IS NULL;
 
 Além disso, foram desenvolvidas queries agregadas para geração de métricas que serão utilizadas diretamente nas visualizações.
 ---
-🔹 Load (Carregamento no Power BI)
+🔹 Load (Carregamento no Looker Studio)
 
-Após o tratamento e consolidação dos dados no SQLite, o próximo passo do projeto consiste no carregamento dos dados no Power BI.
+Após a etapa de transformação e agregação dos dados no SQLite, os resultados analíticos foram preparados para visualização em ferramenta de Business Intelligence.
 
-Objetivos desta etapa:
+As consultas SQL foram utilizadas para consolidar métricas relevantes (como vendas totais, metas batidas e desempenho por colaborador e período). Em seguida, o resultado dessas queries foi exportado em formato CSV, contendo apenas os dados tratados e prontos para análise.
 
-Conectar o Power BI ao banco SQLite
+Esse arquivo foi então importado no Google Sheets e utilizado como fonte de dados no Looker Studio, permitindo a criação de dashboards interativos com foco em:
 
-Criar dashboards analíticos com foco em desempenho comercial
+Análise de desempenho por colaborador
 
-Desenvolver KPIs como:
+Comparação de vendas por período
 
-Total de vendas
+Quantidade de metas batidas
 
-Quantidade de metas batidas por colaborador
+Rankings e KPIs operacionais
 
-Comparação de desempenho mensal
+Essa abordagem simula um fluxo real de trabalho em projetos de dados, onde o banco de dados é responsável pela modelagem e agregação, enquanto a ferramenta de BI é utilizada exclusivamente para visualização e análise exploratória.
 
-Aplicar boas práticas de visualização e storytelling com dados
-
-Essa etapa completa o pipeline ETL, transformando dados tratados em insights visuais e acionáveis.
-
+O dashboard foi estruturado seguindo boas práticas de BI, priorizando clareza visual, hierarquia da informação e fácil interpretação dos resultados.
 🛠️ Tecnologias Utilizadas
 
 Google Sheets — Organização inicial e extração dos dados
@@ -96,7 +93,7 @@ SQLite — Armazenamento e transformação dos dados
 
 SQL — Análise, limpeza e agregação das informações
 
-Power BI — Visualização de dados e criação de dashboards (em desenvolvimento)
+Looker Studio— Visualização de dados e criação de dashboards (em desenvolvimento)
 
 🎯 Considerações Finais
 
